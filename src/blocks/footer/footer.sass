@@ -1,5 +1,43 @@
 /*! .footer */
 .footer
-  height: 10vh
-  background: #219afd
+  height: 100px
+  background: transparent
+.footer__container
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin: 0 238px
+.footer__container-item  
+  ul
+    display: flex 
+    li
+      padding: 10px 
+      a
+        text-decoration: none
+        font-style: normal
+        font-weight: 600
+        font-size: 14px
+        line-height: 17px
+        letter-spacing: 0.01em
+        color: $dark
+  a
+    transition: all linear .5s
+    text-decoration: none
+    font-style: normal
+    font-weight: 600
+    font-size: 18px
+    line-height: 25px
+    letter-spacing: 0.01em
+    color: $dark      
+    display: flex
+    &:hover 
+      color: $accentcolor
+.color-text
+  font-style: normal
+  font-weight: 600
+  font-size: 14px
+  line-height: 17px
+  text-align: right
+  letter-spacing: 0.01em
+  color: $accentcolor
 /*! .footer end*/

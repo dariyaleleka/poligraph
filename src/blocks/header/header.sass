@@ -1,5 +1,208 @@
 /*! .header */
 .header
-  height: 10vh
-  background: #219afd
+  transition: all linear .5s
+  font-style: normal
+  font-weight: normal
+  font-size: 16px
+  line-height: 23px
+  letter-spacing: 0.02em
+  font-family: Museo
+  height: 118px
+  position: absolute
+  top: 0 
+  left: 0
+  right: 0
+  width: 100%
+  z-index: 999 
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), rgba(255, 255, 255, 0.3)
+
+.header__container
+  margin: 0 106px  
+  transition: all linear .5s
+  padding: 16px 0
+
+.header__content
+  transition: all linear .5s
+  display: flex
+  align-items: center
+  a
+    text-decoration: none 
+
+.header__content-logo
+  display: flex
+  align-items: center
+  width: 45%
+  transition: all linear .5s
+  p
+    padding: 0 20px 
+    font-style: normal
+    font-weight: normal
+    font-size: 16px
+    line-height: 23px
+    letter-spacing: 0.02em
+
+.header__content-phones
+  ul 
+    display: flex     
+    li
+      a
+        font-style: normal
+        font-weight: normal
+        font-size: 18px
+        line-height: 25px
+        letter-spacing: 0.02em
+        color: $white
+        text-decoration: none
+
+.header__content-callback
+  display: flex
+  align-items: center 
+
+
+.btn-row 
+    position: absolute
+    right: 29px 
+    margin-right: 40px
+    &:last-child 
+        margin: 0
+    
+.js-burger
+  border-radius: 2px!important
+
+.burger 
+    position: relative
+    display: block
+    width: 34px
+    height: 30px
+    padding: 13px 0
+    border-radius: 2px
+    background-color: #fff
+    background-clip: content-box
+    cursor: pointer
+    transition: background 50ms ease-in 250ms
+    &:before,
+    &:after 
+        content: ''
+        border-radius: 2px
+        position: absolute
+        width: 100%
+        height: 4px
+        top: 0
+        left: 0
+        background: #fff
+        transform: rotate(0deg) scale(1)
+        transition: top .25s ease-in .3s,
+        transform .25s ease-in 0s
+    
+    &:after 
+        top: 26px
+    
+    &.is-open 
+        background-color: transparent
+        transition: background 50ms ease-in 250ms
+        &:before,
+        &:after 
+            top: 13px
+            transition: top .25s ease-in 0s,
+            transform .25s ease-in .3s
+        
+        &:before 
+            transform: rotate(-45deg) scaleX(1.2)
+        
+        &:after 
+            transform: rotate(45deg) scaleX(1.2)
+
+.bottom-line
+  border-bottom: 1px solid $white    
+  transition: all linear .5s
+  margin: 0 27px
+  font-style: normal
+  font-weight: normal
+  font-size: 18px
+  line-height: 25px
+  letter-spacing: 0.02em
+  &:hover
+    border-bottom: 1px solid $white  
+    
+.header__content-callback
+  border-radius: 100px
+  background: rgba(255, 255, 255, 0.1)
+  padding: 0 10px
+  img
+    z-index: 999 
+  p 
+    font-style: normal
+    font-weight: normal
+    font-size: 18px
+    line-height: 25px
+    letter-spacing: 0.02em
+    padding: 15px 12px
+    color: $white
+  &:hover 
+    img
+      animation-duration: 1.5s
+      animation-name: slidein  
+
+@keyframes slidein 
+  0% 
+    transform: rotate(0)
+
+  50%
+    transform: rotate(45deg)
+
+  100%
+    transform: rotate(0)
+    
+.content-main
+  display: flex
+  justify-content: space-between
+  margin-left: 116px   
+.header-content-menu
+  ul
+    li
+      padding: 9px 0
+      a
+        transition: all linear .5s
+        font-family: Gothic1
+        font-style: normal
+        font-weight: bold
+        font-size: 18px
+        line-height: 22px
+        letter-spacing: 0.01em
+        text-transform: uppercase
+        color: $white 
+      &:hover
+        a
+          text-decoration: none
+          margin-left: 15px
+
+.header-content-mobile
+  position: relative
+  width: 100%
+  height: auto
+  position: absolute
+  padding: 20px
+  left: 0
+  right: 0
+  top: 118px
+  z-index: 999 
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), rgba(255, 255, 255, 0.3)
+  font-size: 14px!important
+  line-height: 17px!important
+  letter-spacing: 0.01em!important
+.header-content
+  position: relative
+  width: 100%
+  height: auto
+  position: absolute
+  padding: 20px
+  left: 0
+  right: 0
+  top: 118px
+  z-index: 999 
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), rgba(255, 255, 255, 0.3)
+.header-content-img
+  position: absolute   
+  right: 40px 
+  top: 100px        
 /*! .header end*/
