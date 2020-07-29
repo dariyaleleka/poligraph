@@ -1,0 +1,117 @@
+//news
+
+.news__button
+  margin: 30px 0  
+  display: flex
+  justify-content: flex-end
+   
+  a
+    display: flex
+    align-items: center
+    transition: all linear .5s
+    text-decoration: none
+    font-family: Gothic
+    font-style: normal
+    font-weight: bold
+    font-size: 16px
+    line-height: 20px
+    letter-spacing: 0.025em
+    color: #FFFFFF
+    background: #C4C4C4
+    padding: 13px 21px
+    img
+      transition: all linear .5s
+    &:hover
+      background: #000 
+      & ~ img
+        margin-right: 5px 
+    
+.news
+  width: 100%
+  height: 100%
+.news-container
+  margin: 0 84px
+.news__title
+  margin: 0 auto 
+  text-align: center
+  h3
+    font-style: normal
+    font-weight: normal
+    font-size: 38px
+    line-height: 47px
+    letter-spacing: 0.01em
+    text-transform: uppercase
+    color: #525252  
+    padding: 30px 0
+.news__items-item
+  width: 25%
+  height: 314px
+
+.news__items
+  display: flex  
+.news__items-item
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  padding: 12px
+  transition: all linear .5s
+  img
+    width: 100%
+    height: auto 
+  span
+    transition: all linear .5s
+    font-family: Museo2
+    font-style: normal
+    font-weight: bold
+    font-size: 15.9357px
+    line-height: 22px
+    letter-spacing: 0.01em
+    color: #525252  
+.hash
+  padding: 8px 0
+  font-style: normal
+  font-weight: normal
+  font-size: 13.9437px
+  line-height: 20px
+  letter-spacing: 0.01em
+  color: #525252    
+.date
+  font-style: normal
+  font-weight: normal
+  font-size: 13.9437px
+  line-height: 20px
+  letter-spacing: 0.01em
+  color: #525252
+  display: flex
+  transition: all linear .5s
+  justify-content: space-between
+  margin-top: 30px
+  a
+    text-decoration: none
+    font-style: normal
+    font-weight: normal
+    font-size: 13.9437px
+    line-height: 20px
+    letter-spacing: 0.01em
+    color: #525252
+    transition: all linear .5s
+    display: flex
+    align-items: center
+    img
+      transition: all ease-in .5s
+      width: 20px
+    &:hover
+      img
+        margin-left: 10px   
+.news-page
+    margin: 130px 0 
+.news__items-page
+    flex-wrap: wrap             
+.header-news
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    width: 100%
+    min-height: 106px
+    background-size: cover    

@@ -62,6 +62,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "headhesive": "^1.2.4",
     "jquery": "^3.4.1",
     "rfs": "^9.0.2",
     "smart-grid": "^2.1.2",

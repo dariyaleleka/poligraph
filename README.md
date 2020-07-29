@@ -1,7 +1,14 @@
-# Poligraph project
+# basekit
+
+Simple start template.
+
+## Installation
+
+1. `git clone https://github.com/motrdevua/basekit.git`
+2. `npm install`
 
 
-
+---
 
 ### Run gulp in development mode
 
