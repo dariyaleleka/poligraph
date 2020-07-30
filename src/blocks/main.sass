@@ -77,7 +77,31 @@ body
   color: $main-color
   font-family: $default-font
   +font-size(16px)
+  transition: all cubic-bezier(0, 0, 1, 0.57) .5s
+  button
+    transition: all linear .5s
+    color: $white
+    font-family: Gothic!important
+    font-style: normal!important
+    font-weight: bold!important
+    font-size: 16px!important
+    line-height: 20px
+    letter-spacing: 0.025em!important
+// html 
+//   overflow: hidden
 
+
+// body 
+//   position: fixed
+//   left: 0
+//   top: 0
+//   //right: 0
+//   right: -30px
+//   bottom: 0
+//   //padding: 8px
+//   overflow-y: scroll
+// ::-webkit-scrollbar 
+//   width: 0
 
 p::selection 
     color: $white
@@ -110,15 +134,21 @@ a::selection
 div::selection 
     color: $white
     background: $accentcolor  
-    padding: 5px                       
+    padding: 5px
+li::selection 
+    color: $white
+    background: $accentcolor   
+    padding: 5px                           
    
 // sticky footer (always at the bottom of page)
-
 .wrapper
   position: relative
-  display: flex
-  flex-direction: column
+.wrapper-page
+  position: relative
+  // display: flex
+  // flex-direction: column
   height: 100%
+  overflow: hidden
 
 .content
   flex: 1 0 auto
@@ -142,18 +172,1461 @@ div::selection
 @import header/header
 @import content/content
 @import footer/footer
+@import thankyou/thankyoupage
+@import news/news
+@import post/post
+@import popup/popup
+@import about/about
+@import buisness/buisness
+@import header-two/header-two
+@import privat/privat
 
 // =====================  Media  ==========================
 
 /*! Media */
-// @media screen and (max-width: 1200px)
+@media screen and (min-width: 1920px)
+  .animation-form__slider 
+    right: 110px !important
+  .animation-form__form 
+    left: 227px
+@media screen and (min-width: 1400px)
+
+  
+  .thankyou
+    width: 100%
+    height: 100%
+    position: relative
+    background: $dark
+    img
+        width: 100%
+@media screen and (max-width: 1400px)
+
+
+  .price-screen__content-row 
+    h3
+      width: 50%
+
+
+  .services__item
+    background-size: cover
+  .thankyou 
+    img 
+      background-size: cover
+      height: 100%
+  .post__content-header p, 
+  .post__content-header h3
+    width: 70%   
+  .advantages__content-row-title 
+    p
+      bottom: 76px
+  .advantages__content-row 
+    h2 
+      width: 65%
+  .projects_title
+    text-align: center
+  .projects__container 
+    margin: 70px 101px
+  .rewies__content-row-title-second
+    width: 37%
+  .rewies__content-row-title-second 
+    h4 
+      width: 96%
+  .footer__container 
+    margin: 0 80px
+  .header__content-logo
+    width: 73%
+  .header__content-phones
+    display: none
+  .header__container 
+    margin: 0 84px  
+@media screen and (max-width: 1380px)
+  .animation-form__form
+    top: 26%
+    left: 50%
+    margin-right: -50%
+    transform: translate(-50%, -50%) 
+    z-index: 999
+
+  .animation-form__slider
+    display: none!important
+@media screen and (max-width: 1200px)
+
+  .left-side
+    width: 71%
+
+  .price-screen__content-row 
+    h3
+      width: 56%
+
+  .services__item
+    padding: 20px
+
+  .services_container 
+    padding: 0 15px 0 15px
+
+  .services__item
+    width: 48%
+
+  .command
+    height: 100%
+
+  .right-side  
+    width: 70%
+
+  .content-first-screen__title-block 
+    position: absolute
+    left: 41px
+
+  .content-first-screen__title-block
+    margin-left: 0
+
+  .about__container 
+    padding: 100px 41px
+
+
+  .about___item-border 
+    right: 41px
+
+
+  .post__content-text, .post__item-social
+    width: 64%
+
+
+
+  .instruction 
+    width: 100%
+    min-height: 1080px
+    height: 100%
+
+
+  .advantages__content-row-items 
+    margin: 40px auto
+    width: 88%
+
+  .advantages__content-row-title 
+    p
+      bottom: 42px
+
+  .advantages__content-row 
+    h2 
+      width: 100%
+
+  .projects__items-item 
+    p 
+      font-size: 14px
+      line-height: 18px
+  .rewies__content-row__photo-four, .rewies__content-row__photo-three
+    padding: 50px 50px
+  .rewies__content-row-title-second 
+    h4 
+      width: 100%
+  .rewies__content-row-title-second 
+    width: 30%
+  .rewies__content-row-title 
+    h2
+      font-size: 29px
+  .rewies__content-row__photo-two 
+    padding: 80px 38px
+  .rewies__content-row__photo-one 
+    padding: 80px 27px
+  .rewies__content-row__photo
+    padding: 80px 28px
+  .news
+    height: auto
+  .news__items 
+    flex-wrap: wrap
+    justify-content: center
+  .news__items-item 
+    width: 30%
+    height: 314px
+  .footer__container 
+    margin: 0 51px
+  .header__content-logo
+    width: 60%
+  .header__container
+    margin: 0 88px  
+
+  .header__content-phones
+    display: none  
  
-// @media screen and (max-width: 992px)
+@media screen and (max-width: 1024px)
+
+  .popup__content
+    padding: 65px 48px
+
+  .busness-block__right
+    width: 40%
+
+  .services__item 
+    padding: 37px 27px
+
+  .first-screen__info 
+    width: 47%
+    left: 84px
+
+  .popup-button 
+    width: 292px!important
   
-// @media screen and (max-width: 768px)
+  .about___item-border 
+    right: 38px
+
+  .footer__container 
+    margin: 0 28px
+
+  .instruction__content__box-container
+    margin: 0 auto
   
-// @media screen and (max-width: 576px)
+
+  .callback__form 
+    max-width: 916px
+    height: auto
+    width: 100%
+    
+  .rewies__content-row__photo
+    width: 49%
   
-// @media screen and (max-width: 320px)
+  .header__container 
+    margin: 0 50px
+@media screen and (max-width: 992px)
+
+  .popup__content-form
+    width: 88%
+
+  .price-desc 
+    width: 71%
+
+  .privat-title-form 
+    width: 100%
+  .price-screen__content-row 
+    h3 
+      width: 71%
+
+  .callback-buisness 
+    min-height: 747px
+
+  .services__item 
+    width: 67%
+    margin: 17px auto
+  .buisness-right__mobile
+    height: auto
+    padding: 30px 0
+    display: block
+    .busness-block__right
+      transform: translate(-50%, -50%)
+      left: -50%
+      top: 50%
+      position: absolute
+      width: 100%
+      &-item
+        margin: 0
+        padding: 15px 0
+        display: flex
+        align-items: end
+        justify-content: flex-start
+        img
+            margin: 0 21px  
+  .busness-block__right
+    display: none
+  .command__content
+    align-items: center
+    margin: 0 auto
+    //justify-content: center
+    flex-wrap: wrap
+  .command__content-item
+    height: 636px
+    margin: 0 auto
+    width: 44%
+    margin-bottom: 30px  
+  .right-side, .left-side 
+    width: 80%
+  .first-screen__info 
+    width: 70%
+  .thankyou__box
+    width: 50%
+
+  .about___item-border
+    top: 50%
+    left: 50%
+    margin-right: -50%
+    transform: translate(-50%, -50%)  
+
+  .about___item
+    width: 100%
+
+  .mobile-box
+    display: block
+    background: #464448
+    height: 800px
+    position: relative
+  .desktop-box
+    display: none
+
+  .post__content-header p, .post__content-header h3 
+    width: 90%
+
+  .instruction__content__box-transparent
+    display: none
+
+  .instruction__content__box-container 
+    z-index: 999
+    position: relative
+    padding: 50px 21px
+    margin: 0 43px
+    max-width: 868px
+
+  .callback__form-bg
+    max-width: 867px
+    width: 100% 
+    height: 326px
+
+  .callback__form-date 
+    padding: 24px 19px
+    right: -24px
+
+  .callback__form 
+    max-width: 867px
+  .advantages__content-row-title 
+    p
+      bottom: 50px
+  .advantages__container 
+    margin: 0 20px
+
+  .content-first-screen__title-block
+    left: 20px
+  .content-first-screen__icon-block
+    right: 20px
+  .content-first-screen__title-block 
+    width: 45%
+    margin-left: 1px
+  .rewies__container 
+    margin-left: 20px
+    margin-right: 20px
+  .news__items-item 
+    width: 50%
+    height: 314px
+  .news 
+    width: 100%
+    height: auto
+  .news__items 
+    flex-wrap: wrap
+    justify-content: center
+  .section-map-content-map 
+    height: 416px
+  .section-map-content-contacts
+    left: 50%
+    margin-right: -50%
+    transform: translate(-50%)
+  .phone-call
+    width: 29%
+  .footer__container 
+    margin: 0 0px  
+  .header__container 
+    margin: 0px 0px
+@media screen and (max-width: 900px)
+
+  .privat-block__right, .busness-block__right
+    display: none
+
+  .callback-privat
+    min-height: 688px!important
+
+  .text-form-width 
+    width: 100%
+
+  .price-screen__container 
+    padding: 0 31px
+
+  .price-desc 
+    width: 76%
+
+  .callback__form-date
+    padding: 20px 19px
+
+  .command__content-item
+    width: 100%
+
+  .instruction__content__box-transparent
+    max-width: 800px
+    width: 100%
+
+  .instruction__content__box-container 
+    margin: 0 auto
+    max-width: 799px
+    height: 100%
+
+  .instruction__content__box-transparent
+    left: 0
+
+  .callback__form
+    top: 24px
+  
+ 
+
+  .callback
+    background: #F8F8F8 
+
+  .callback-container 
+    margin: 58px
+    background: transparent
+
+  .clock-form 
+    img 
+      position: absolute
+      right: -52px
+      bottom: 3px
+      z-index: -1
+      width: 200px
+
+  .main-button-thin
+    width: 266px
+  .callback
+    min-height: 500px
+
+  .callback-container
+    height: 100%
+  
+
+  .contact-form
+    flex-direction: column
+    align-items: center
+    justify-content: center 
+  .advantages__content-row-title 
+    p
+      width: 100%
+  .projects-text-block 
+    width: 100%
+    margin: 0 auto
+  .projects__items-item
+    width: 50%
+  .projects__row
+    flex-wrap: wrap 
+  .rewies 
+    img
+      display: none
+  .rewies__content-row__photo, .rewies__content-row__photo-one, .rewies__content-row__photo-two, .rewies__content-row__photo-three, .rewies__content-row__photo-four
+    width: 100%
+  .rewies__content-row-title
+    width: 100%
+  .rewies__content-row
+    flex-direction: column
+  .rewies__content-row-title-second
+    display: none    
+@media screen and (max-width: 840px)
+  .privat-quote
+    display: none
+  .title 
+    flex-direction: column
+    img
+      margin: 10px 0
+      position: relative
+      left: -3px 
+
+  .answers__content-blocks
+    padding: 0 
+    padding-left: 36px
+
+  .main .accordion
+    width: 100%
+    padding: 10px 0  
+
+  .answers-container
+    flex-direction: column
+
+  .main 
+    .accordion 
+      max-width: 100%
+      height: auto
+      margin: 0 auto
+  .instruction__content__box-container 
+    height: 100%
+  .instruction__content__box-container 
+    margin: 0 auto
+    max-width: 799px
+    width: 100%
+  .advantages__content-row-items
+    width: 100%
+  .advantages 
+    height: 100%
+    width: 100%
+    background-position: 30% 30%
+  .advantages__container
+    height: 100%
+  .advantages__content-row-title
+    display: none    
+  .advantages__content
+    flex-direction: column
+    height: 100%
+    justify-content: center
+  .advantages__content-row 
+    width: 100%
+    h2
+      margin: 20px 0   
+@media screen and (max-width: 768px)
+
+  .bg-blue
+    height: 198px
+
+  
+
+  .animation-politic
+    display: none
+
+  .hidden-form-anim
+    display: none!important  
+    
+
+  .animation-form 
+    width: 100%
+    height: 966px
+
+  .popup__content
+    padding: 65px 45px
+  .price-buttons
+    align-items: center
+
+  .callback__form-date 
+    padding: 0px 14px
+
+  .callback__form-date 
+    p
+      font-size: 13px
+
+  .callback-privat 
+    min-height: 790px !important
+
+  .privat-desc-block
+    height: 128px!important
+
+  .quotes-privat
+    min-height: 900px!important 
+
+  .privat-quote-second 
+    position: absolute
+    right: 0vw
+    top: -22vw
+
+  .price-desc 
+    width: 100%
+
+  .price-screen
+    background-position:  71%
+  .price-screen__content-row 
+    h3
+      width: 85%
+  .price-screen__content-row-item 
+    width: 69%
+
+  .price-screen__content-row
+    flex-direction: column
+
+  .callback__form-buisness
+    min-height: 683px
+
+  .buisness-form-title 
+    font-family: Gothic
+    font-style: normal
+    font-weight: bold
+    font-size: 18px
+    line-height: 25px
+    letter-spacing: 0.01em
+    color: #525252
+    width: 100%
+    margin-left: 10px
+    padding-top: 42px
+
+  .text-form-width
+    width: 100%
+
+ 
+  .services-logo-vector
+    top: 50%
+    left: 50%
+    //margin-left: -50%
+    transform: translate(-50%, -50%)
+    width: 251px
+    height: auto
+    //display: none
+
+  .services-logo
+    max-width: 416px
+    height: auto
+    top: 65%
+    left: 50%
+    //margin-left: -50%
+    transform: translate(-50%, -50%)
+    //display: none
+
+
+  .first-item-b
+    padding: 30px!important
+
+  .burger-menu
+    left: 73px
+    bottom: -2px
+
+  .services_container
+    padding: 0
+
+  .services__item 
+    width: 100%
+
+  .left-side
+    width: 88%
+    left: 44px
+    top: 171px
+
+  .right-side,  
+    width: 88%
+    right: 44px
+    top: 171px
+
+  .first-screen__info 
+    left: 29px
+    width: 95%
+    top: 215px
+
+  .popup__content 
+    max-width: 439px
+    min-height: 415px
+  .thankyou__box 
+    position: absolute
+    top: 50%
+    width: 65%
+    margin: 20px
+  .post__content-text, .post__item-social
+    width: 100%
+    padding: 30px
+
+  .post__content-header
+    padding-top: 210px
+    padding-left: 30px
+    padding-right: 0
+    padding-bottom: 0
+
+  .post__content-header 
+    h3 
+      width: 100%
+
+  .instruction__content__box-container 
+    margin: 0 43px
+    width: 100%
+  .numbers__item, .numbers__item-img
+    margin: 0 auto
+    width: 50%
+
+  .numbers__item-img-phone
+    display: none
+  .iphone
+    display: none
+
+  .instruction__content__box-container
+    height: 100%
+
+  .instruction__content__box-container-numbers
+    flex-direction: column
+
+  .instruction__content__box-container 
+    margin: 0 43px
+    // max-width: 765px
+
+  .instruction__content__box-transparent 
+    max-width: 767px
+    width: 100%
+
+  .instruction__content__box-container 
+    margin: 0 0px
+
+  .desktop-mobile-form-date
+    display: none
+
+
+  .mobile-form-date
+    display: block
+
+
+  .callback__form 
+    max-width: 867px
+    min-height: 639px
+  .callback-container 
+    margin: 58px 16px
+
+  .desktop-politic
+    display: none
+
+  .mobile-politic
+    display: block
+  .clock-form
+    position: absolute
+    bottom: 38px
+
+  .callback 
+    min-height: 900px
+
+  .projects__container 
+    margin: 70px 55px
+  .rewies__content-row__photo, .rewies__content-row__photo-one, .rewies__content-row__photo-two, .rewies__content-row__photo-three, .rewies__content-row__photo-four
+    margin: 15.5px 0
+    
+  .rewies__content-row-title 
+    h2 
+      font-size: 29px
+      margin: 10px
+  .rewies__container 
+    margin-left: 0
+    margin-right: 0
+
+  .news-container 
+    margin: 0 30px
+
+  .news__items-item 
+    width: 45%
+    height: 314px
+  .section-map-content-map 
+    margin: 24px
+  .content-first-screen__title-block 
+    width: 100%
+    left: 0
+    padding: 31px
+    margin-left: 0
+  .content-first-screen 
+    width: 100%
+    
+  
+  .first-hidden
+    display: none
+  .hidden-block-first
+    display: block
+    position: relative
+    width: 100%
+    margin: 0 auto
+    height: 500px
+    background: #464448
+  .content-first-screen__icon-block
+    top: 50%
+    left: 50%
+    margin-right: -50%
+    transform: translate(-50%, -50%)  
+
+  .phone-call
+    padding-top: 35px
+  .footer__container
+    padding: 88px 0
+  .footer__container-item 
+    ul
+      flex-direction: column
+      align-items: center
+
+  .footer__container
+    flex-direction: column
+  .phone-call 
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center  
+  
+
+  .header-content-mobile 
+    top: 198px
+  .header__content
+    position: relative
+  .header
+    height: 198px
+  .header__content
+    flex-direction: column
+  .header__content-logo 
+    width: 90%
+    align-items: center
+    justify-content: space-between  
+  .popup__content-mail
+    min-height: 490px!important  
+  
+@media screen and (max-width: 576px)
+
+  
+
+  
+
+  .bg-content 
+    background-position: left
+
+  .animation-desc 
+    width: 100%
+
+  .mob-animation-politics
+    width: 60%
+    margin: 20px 0px!important
+
+
+  .animation-phone
+    width: 128px!important
+
+  .animation-form__form 
+    width: 94%
+
+  .popup__content 
+    padding: 63px 40px
+
+  .popup__content-form 
+    width: 92%
+
+  .popup__content-mail
+    padding: 61px 31px!important
+
+  .popup__content-mail
+    min-height: 490px!important
+
+  .quotes__container-block 
+    p 
+      font-size: 15px
+      line-height: 24px
+
+  .quotes-about
+    min-height: 835px
+
+  
+  .privat-quote-second 
+    position: absolute
+    right: 0vw
+    top: -30vw
+  .price-desc 
+    width: 100%
+  .privat-title-form 
+    width: 100%
+  .price-screen__content-row-item 
+    width: 90%
+  .price-screen__content-row 
+    h3 
+      width: 100%
+  .buisness-form-title 
+    ul 
+      li 
+        img
+          display: none
+  .buisness-form-title
+    margin-left: 0
+  .callback__form-buisness
+    min-height: 703px!important
+
+  .first-item-b
+    height: 361px!important
+
+  .quotes-buisness
+    background-position:  84%
+  .services__item 
+    p
+      font-style: normal
+      font-weight: normal
+      font-size: 20px
+      line-height: 28px
+      etter-spacing: 0.01em
+
+  .services__item 
+    h3
+      font-family: Gothic
+      font-style: normal
+      font-weight: normal
+      font-size: 20px
+      line-height: 28px
+      letter-spacing: 0.01em
+      text-transform: uppercase
+
+  .services_container 
+    padding: 0 
+
+  .services__item
+    width: 100%
+    margin: 0 auto
+    background-size: cover
+    background-position: bottom
+    height: 610px
+  .services__item
+    padding: 27px
+    margin-bottom: 20px  
+
+  .bg-content 
+    min-height: 204px
+
+  .answers__content-title
+    padding: 0 15px
+    h2
+      font-size: 20px
+      line-height: 28px
+      letter-spacing: 0.01em
+
+  .answers__content-blocks
+    padding-left: 15px
+
+  .answers-arrow-down
+    top: 8%
+
+  .main .accordion-item .paragraph
+    font-size: 17px
+
+  .main .accordion-item .title 
+    font-size: 16px
+    line-height: 23px
+
+  .first-screen__info 
+    left: 18px
+
+  //.quotes 
+    //height: 100%
+    //height: 864px
+
+  .first-screen 
+    min-height: 855px
+
+  .popup__content-mail
+    max-width: 400px
+    min-height: 490px!important
+
+  .popup__content 
+    max-width: 400px
+    min-height: 415px
+    width: 100%
+    //padding: 63px 57px
+
+  .thankyou__box 
+    position: absolute
+    top: 50%
+    width: 90%
+    h2
+      font-size: 31px
+      line-height: 38px 
+
+  .about___item 
+    img
+      width: 100%
+
+
+  .about___item-border 
+    max-width: 400px
+    width: 100%
+    min-height: 638px
+    margin: 0 auto
+
+  .mobile-soc
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+  .social-icons
+    padding: 10px
+
+  .post__content-text 
+    p
+      font-size: 16px
+
+  .post__content-header 
+    p
+      font-size: 18px
+      line-height: 27px
+
+  .post__content-header 
+    h3 
+      font-size: 20px
+      line-height: 23px
+
+  .instruction__content__title 
+    h2 
+      font-size: 22px
+      line-height: 24px
+
+  .instruction__content__box-container
+    padding: 50px 0
+
+  .mobile-iphone
+    background: #F8F8F8
+
+  .numbers__item-img
+    height: auto
+  .numbers__item, .numbers__item-img 
+    margin: 0 auto
+    width: 83%
+  .instruction__content__title 
+    padding: 74px 42px
+    
+  
+  .instruction__content__box-transparent
+    display: none
+  .instruction__content__box-container  
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.1)
+    width: 88%
+    margin: 0 auto
+
+  .instruction__content__desc 
+    margin: 74px 73px
+    width: 82%
+
+  .mobile-form-date
+    right: -20px
+    position: relative
+
+  .mobile-form-date
+    p
+      font-size: 8px 
+
+  .callback__form-date 
+    padding: 5px 9px
+
+  .mobile-form-date
+    img
+      width: 30px 
+
+  .desktop-mobile-form-date
+    bottom: 0
+
+  .desktop-mobile-form-date
+    display: none
+
+  .clock-form
+    position: absolute
+    bottom: 38px
+
+  .callback__form
+    padding: 37px 25px
+
+  .callback__form 
+    p
+      font-size: 16px
+
+  .mobile-politic
+    display: block
+    text-align: left
+    margin: 20px 36px
+
+  .desktop-politic
+    display: none
+  .callback__form-bg
+    max-width: 867px
+    min-height: 639px
+
+  .callback__form 
+    max-width: 867px
+    min-height: 639px
+  .callback-container 
+    margin: 58px 16px
+  
+  .advantages__content-row 
+    h2 
+      font-size: 25px
+      line-height: 33px
+  .projects__items-item
+    width: 100%
+  .news__title 
+    h3
+      font-size: 20px
+      line-height: 25px
+  .rewies__content-row-title 
+    h2 
+      font-size: 20px
+      line-height: 28px
+  .news__items-item 
+    width: 100%
+  .news-container 
+    margin: 0px 28px
+  .content-first-screen__title-block 
+    h1
+      font-size: 20px 
+      line-height: 25px
+  .section-map-content-contacts
+    top: 50%
+    left: 50%
+    margin-right: -50%
+    transform: translate(-50%, -50%)
+  .section-map-content-map 
+    height: 616px
+  .section-map-content-map 
+    margin: 20px
+
+  .header__content-logo 
+    width: 100%
+  .content-first-screen__title-block 
+    button
+      position: absolute
+      bottom: 10px
+      left: 50%
+      margin-right: -50%
+      transform: translate(-50%, -50%)
+  .item-icon 
+    img 
+      margin-bottom: 20px
+      width: 62px
+  .item-icon 
+    p
+      font-size: 14px
+      line-height: 20px
+
+  .item-icon 
+    margin: 11px
+  .content-first-screen__icon-block 
+    width: 90%
+    height: 100%
+    max-width: 452px
+    max-height: 370px
+  .content-first-screen__title-block 
+    height: 72%
+    text-align: center
+    h1
+      text-align: left
+    h2
+      text-align: left
+  .content-first-screen__title-block 
+    text-align: center
+    h1
+      text-align: left
+    h2
+      text-align: left
+  
+  .header__content-callback 
+    p
+      font-size: 16px
+  .header__content-callback
+    position: absolute
+    top: 108px
+    right: 23px 
+  .header__content-logo 
+    img
+      width: 184px
+  .btn-row
+    left: 48px
+    top: 115px
+  .header__content-logo 
+    p 
+      padding: 0 1px
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+  .header-content-menu 
+    ul 
+      li 
+        a
+          font-size: 14px
+  .content-main
+    margin-left: 18px
+@media screen and (max-width: 440px)
+
+  .services-logo-vector 
+    top: 63%
+    left: 50%
+    width: 236px
+
+  .services-logo 
+    max-width: 364px
+    height: auto
+    top: 76%
+    left: 50%
+
+ 
+
+  .quotes-about 
+    min-height: 859px
+
+  .quotes-buisness
+    min-height: 735px
+
+  .news-page 
+    margin: 211px 0
+
+  .clock-form 
+    img 
+      position: absolute
+      right: -44px
+
+  .callback-privat 
+    min-height: 934px !important
+
+  
+
+  .services__item 
+    padding: 17px
+
+  .quotes-privat 
+    min-height: 1142px !important
+    height: 100%
+
+  .price-screen_title
+    padding-left: 20px
+  .price-screen__container
+    padding: 0 0px
+  .price-desc
+    padding-left: 20px
+    font-size: 16px
+    line-height: 23px
+  .price-screen__content-row 
+    h3
+      font-style: normal
+      font-weight: normal
+      font-size: 20px
+      line-height: 25px
+      letter-spacing: 0.01em
+      text-transform: uppercase
+
+  .price-desc 
+    width: 100%
+
+  .left-side 
+    width: 88%
+    left: 22px
+  // .left-side 
+  //   width: 88%
+  //   left: 22px
+
+  
+
+  .text-center
+    width: 100%
+    text-align: left!important
+
+  .command__container
+    padding: 0 20px
+  .command__content-item
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center 
+    height: 100%
+    img
+      margin: 0 30px 
+  .first-screen-about
+    background-image: url('../img/about-first.png')!important
+
+  .first-screen 
+    width: 100%
+    height: 660px
+  .quotes-about
+    background-image: url('../img/quote-mobbg.png')!important
+    width: 100%
+    
+    position: relative   
+    background-size: cover
+  .right-side 
+    width: 90%
+    right: 20px
+    top: 61px
+    h4
+      text-align: left
+      font-style: normal
+      font-weight: bold
+      font-size: 24px
+      line-height: 34px
+      letter-spacing: 0.01em
+    p 
+      font-size: 15px
+      text-align: left  
+  .left-quote
+    display: none
+  .first-screen 
+    min-height: 620px
+  .first-screen__info 
+    h2
+      font-size: 20px
+      line-height: 25px 
+    p
+      font-size: 18px
+      line-height: 27px
+   
+@media screen and (max-width: 411px)
+  .quotes 
+    height: 791px
+
+  
+
+  .serv-desc
+    width: 84%
+
+  .command__content-item
+    height: 100%
+    img
+      margin: 0 10px
+
+  .popup__content 
+    max-width: 320px
+    min-height: 415px
+    width: 100%
+    padding: 63px 16px
+
+  // .popup__content 
+  //   max-width: 378px
+  //   min-height: 415px
+  //   width: 100%
+  //   padding: 63px 35px
+
+
+  .about___item-border 
+    max-width: 350px
+    width: 100%
+    min-height: 766px
+    margin: 0 auto
+
+  .instruction__content__desc 
+    margin: 74px 61px
+
+  .instruction__content__title 
+    padding: 40px 42px
+
+  .instruction__content__title 
+    h2 
+      font-size: 20px
+      line-height: 25px
+
+  .numbers__item, .numbers__item-img 
+    margin: 0 auto
+    width: 100%
+
+  .callback__form 
+    p
+      line-height: 23px
+  .advantages__content-row 
+    h2 
+      font-size: 20px
+      line-height: 25px
+  .projects__items-item 
+    p 
+      padding: 0 14px
+  .projects__items-item 
+    p 
+      font-size: 20px
+      line-height: 20px
+  .projects__container 
+    margin: 70px 21px
+  .news-container 
+    margin: 0px 30px
+  .news__items-item 
+    width: 100%
+  .content-first-screen__title-block 
+    button
+      position: absolute
+      bottom: 10px
+      left: 50%
+      margin-right: -50%
+      transform: translate(-50%, -50%)
+  .item-icon 
+    img 
+      margin-bottom: 20px
+      width: 62px
+  .item-icon 
+    p
+      font-size: 14px
+      line-height: 20px
+
+  .item-icon 
+    margin: 11px
+  .content-first-screen__icon-block 
+    width: 90%
+    height: 100%
+    max-width: 452px
+    max-height: 370px
+  .content-first-screen__title-block 
+    height: 72%
+    text-align: center
+    h1
+      text-align: left
+    h2
+      text-align: left  
+  .header__content-callback
+    position: absolute
+    top: 108px
+    right: 10px
+  .btn-row
+    left: 35px
+    top: 115px  
+@media screen and (max-width: 375px)
+
+  .popup__content
+    padding: 63px 0px
+
+  .popup__content-mail 
+    padding: 61px 0px !important
+
+  .callback 
+    min-height: 947px!important
+
+  .services__item
+    width: 100%
+    //margin: 0 auto
+    background-size: cover
+    background-position: bottom
+    height: 580px
+
+  .command__content-item
+    height: 100%
+    img
+      margin: 0 10px
+
+  .thankyou__box 
+    position: absolute
+    top: 50%
+    width: 81%
+
+  .about__container 
+    padding: 18px 22px
+
+  .mobile-box 
+    min-height: 900px
+
+  .about___item-border 
+    max-width: 330px
+    width: 100%
+    min-height: 781px
+    margin: 0 auto
+  .content-first-screen__title-block 
+    h1 
+      font-size: 20px
+      line-height: 25px    
+@media screen and (max-width: 360px)
+  .content-first-screen__title-block 
+    h1 
+      font-size: 20px
+      line-height: 25px
+  .header__content-logo 
+    img
+      width: 169px
+@media screen and (max-width: 320px)
+  .busness-title
+    font-size: 15px
+    span
+      font-size: 16px 
+
+
+  .services__item 
+    height: 634px
+
+  .screen__info 
+    left: 9px
+
+  .command__content-item 
+    img 
+      margin: 0 0px
+
+  .quotes 
+    height: 923px
+
+  .contact-form 
+    p
+      margin: 0
+
+  .callback__form 
+    p 
+      font-size: 13px
+      line-height: 15px
+
+  .clock-form 
+    img 
+      position: absolute
+      right: -22px
+
+  .callback__form-bg 
+    top: -15px
+    right: -5px
+  .rewies__content-row__photo, .rewies__content-row__photo-one, .rewies__content-row__photo-two, .rewies__content-row__photo-three, .rewies__content-row__photo-four
+    padding: 30px 29px
+  .header__content-callback 
+    p 
+      font-size: 14px
+  .header__content-logo 
+    img
+      width: 132px
+
   
 /*! Media End*/

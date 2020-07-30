@@ -1,1 +1,174 @@
-"use strict";function _typeof(t){return(_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}!function(t,e){"function"==typeof define&&define.amd?define([],function(){return e()}):"object"===("undefined"==typeof exports?"undefined":_typeof(exports))?module.exports=e():(void 0).Headhesive=e()}(0,function(){var t=function(o,s){var i,n,l,c=Date.now||function(){return(new Date).getTime()},f=null,r=0,h=function(){r=c(),f=null,l=o.apply(i,n),i=n=null};return function(){var t=c(),e=s-(t-r);return i=this,n=arguments,e<=0?(clearTimeout(f),f=null,r=t,l=o.apply(i,n),i=n=null):f||(f=setTimeout(h,e)),l}},e=function(t,e){"querySelector"in document&&"addEventListener"in window&&(this.visible=!1,this.options={offset:300,offsetSide:"top",classes:{clone:"headhesive",stick:"headhesive--stick",unstick:"headhesive--unstick"},throttle:250,onInit:function(){},onStick:function(){},onUnstick:function(){},onDestroy:function(){}},this.elem="string"==typeof t?document.querySelector(t):t,this.options=function t(e,o){for(var s in o)o.hasOwnProperty(s)&&(e[s]="object"===_typeof(o[s])?t(e[s],o[s]):o[s]);return e}(this.options,e),this.init())};return e.prototype={constructor:e,init:function(){if(this.clonedElem=this.elem.cloneNode(!0),this.clonedElem.className+=" "+this.options.classes.clone,document.body.insertBefore(this.clonedElem,document.body.firstChild),"number"==typeof this.options.offset)this.scrollOffset=this.options.offset;else{if("string"!=typeof this.options.offset)throw new Error("Invalid offset: "+this.options.offset);this._setScrollOffset()}this._throttleUpdate=t(this.update.bind(this),this.options.throttle),this._throttleScrollOffset=t(this._setScrollOffset.bind(this),this.options.throttle),window.addEventListener("scroll",this._throttleUpdate,!1),window.addEventListener("resize",this._throttleScrollOffset,!1),this.options.onInit.call(this)},_setScrollOffset:function(){"string"==typeof this.options.offset&&(this.scrollOffset=function(t,e){for(var o=0,s=t.offsetHeight;t;)o+=t.offsetTop,t=t.offsetParent;return"bottom"===e&&(o+=s),o}(document.querySelector(this.options.offset),this.options.offsetSide))},destroy:function(){document.body.removeChild(this.clonedElem),window.removeEventListener("scroll",this._throttleUpdate),window.removeEventListener("resize",this._throttleScrollOffset),this.options.onDestroy.call(this)},stick:function(){this.visible||(this.clonedElem.className=this.clonedElem.className.replace(new RegExp("(^|\\s)*"+this.options.classes.unstick+"(\\s|$)*","g"),""),this.clonedElem.className+=" "+this.options.classes.stick,this.visible=!0,this.options.onStick.call(this))},unstick:function(){this.visible&&(this.clonedElem.className=this.clonedElem.className.replace(new RegExp("(^|\\s)*"+this.options.classes.stick+"(\\s|$)*","g"),""),this.clonedElem.className+=" "+this.options.classes.unstick,this.visible=!1,this.options.onUnstick.call(this))},update:function(){(void 0!==window.pageYOffset?window.pageYOffset:(document.documentElement||document.body.parentNode||document.body).scrollTop)>this.scrollOffset?this.stick():this.unstick()}},e});
+"use strict";
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+/*!
+ * Headhesive.js v1.2.3 - An on-demand sticky header
+ * Author: Copyright (c) Mark Goodyear <@markgdyr> <http://markgoodyear.com>
+ * Url: http://markgoodyear.com/labs/headhesive
+ * License: MIT
+ */
+(function (root, factory) {
+  if (typeof define === "function" && define.amd) {
+    define([], function () {
+      return factory();
+    });
+  } else if ((typeof exports === "undefined" ? "undefined" : _typeof(exports)) === "object") {
+    module.exports = factory();
+  } else {
+    root.Headhesive = factory();
+  }
+})(void 0, function () {
+  "use strict";
+
+  var _mergeObj = function _mergeObj(to, from) {
+    for (var p in from) {
+      if (from.hasOwnProperty(p)) {
+        to[p] = _typeof(from[p]) === "object" ? _mergeObj(to[p], from[p]) : from[p];
+      }
+    }
+
+    return to;
+  };
+
+  var _throttle = function _throttle(func, wait) {
+    var _now = Date.now || function () {
+      return new Date().getTime();
+    };
+
+    var context, args, result;
+    var timeout = null;
+    var previous = 0;
+
+    var later = function later() {
+      previous = _now();
+      timeout = null;
+      result = func.apply(context, args);
+      context = args = null;
+    };
+
+    return function () {
+      var now = _now();
+
+      var remaining = wait - (now - previous);
+      context = this;
+      args = arguments;
+
+      if (remaining <= 0) {
+        clearTimeout(timeout);
+        timeout = null;
+        previous = now;
+        result = func.apply(context, args);
+        context = args = null;
+      } else if (!timeout) {
+        timeout = setTimeout(later, remaining);
+      }
+
+      return result;
+    };
+  };
+
+  var _getScrollY = function _getScrollY() {
+    return window.pageYOffset !== undefined ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+  };
+
+  var _getElemY = function _getElemY(elem, side) {
+    var pos = 0;
+    var elemHeight = elem.offsetHeight;
+
+    while (elem) {
+      pos += elem.offsetTop;
+      elem = elem.offsetParent;
+    }
+
+    if (side === "bottom") {
+      pos = pos + elemHeight;
+    }
+
+    return pos;
+  };
+
+  var Headhesive = function Headhesive(elem, options) {
+    if (!("querySelector" in document && "addEventListener" in window)) {
+      return;
+    }
+
+    this.visible = false;
+    this.options = {
+      offset: 300,
+      offsetSide: "top",
+      classes: {
+        clone: "headhesive",
+        stick: "headhesive--stick",
+        unstick: "headhesive--unstick"
+      },
+      throttle: 250,
+      onInit: function onInit() {},
+      onStick: function onStick() {},
+      onUnstick: function onUnstick() {},
+      onDestroy: function onDestroy() {}
+    };
+    this.elem = typeof elem === "string" ? document.querySelector(elem) : elem;
+    this.options = _mergeObj(this.options, options);
+    this.init();
+  };
+
+  Headhesive.prototype = {
+    constructor: Headhesive,
+    init: function init() {
+      this.clonedElem = this.elem.cloneNode(true);
+      this.clonedElem.className += " " + this.options.classes.clone;
+      document.body.insertBefore(this.clonedElem, document.body.firstChild);
+
+      if (typeof this.options.offset === "number") {
+        this.scrollOffset = this.options.offset;
+      } else if (typeof this.options.offset === "string") {
+        this._setScrollOffset();
+      } else {
+        throw new Error("Invalid offset: " + this.options.offset);
+      }
+
+      this._throttleUpdate = _throttle(this.update.bind(this), this.options.throttle);
+      this._throttleScrollOffset = _throttle(this._setScrollOffset.bind(this), this.options.throttle);
+      window.addEventListener("scroll", this._throttleUpdate, false);
+      window.addEventListener("resize", this._throttleScrollOffset, false);
+      this.options.onInit.call(this);
+    },
+    _setScrollOffset: function _setScrollOffset() {
+      if (typeof this.options.offset === "string") {
+        this.scrollOffset = _getElemY(document.querySelector(this.options.offset), this.options.offsetSide);
+      }
+    },
+    destroy: function destroy() {
+      document.body.removeChild(this.clonedElem);
+      window.removeEventListener("scroll", this._throttleUpdate);
+      window.removeEventListener("resize", this._throttleScrollOffset);
+      this.options.onDestroy.call(this);
+    },
+    stick: function stick() {
+      if (!this.visible) {
+        this.clonedElem.className = this.clonedElem.className.replace(new RegExp("(^|\\s)*" + this.options.classes.unstick + "(\\s|$)*", "g"), "");
+        this.clonedElem.className += " " + this.options.classes.stick;
+        this.visible = true;
+        this.options.onStick.call(this);
+      }
+    },
+    unstick: function unstick() {
+      if (this.visible) {
+        this.clonedElem.className = this.clonedElem.className.replace(new RegExp("(^|\\s)*" + this.options.classes.stick + "(\\s|$)*", "g"), "");
+        this.clonedElem.className += " " + this.options.classes.unstick;
+        this.visible = false;
+        this.options.onUnstick.call(this);
+      }
+    },
+    update: function update() {
+      if (_getScrollY() > this.scrollOffset) {
+        this.stick();
+      } else {
+        this.unstick();
+      }
+    }
+  };
+  return Headhesive;
+});
+//# sourceMappingURL=headhesive.js.map

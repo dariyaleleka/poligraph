@@ -1,8 +1,959 @@
 .content-first-screen
   width: 100%
-  height: 100%
+  height: 724px
   background-position: 50% 50%
   background-size: cover
-  //position: relative
+  padding: 112px 0
+  position: relative
+  button
+    transition: all cubic-bezier(0, 0, 1, 0.57) .5s
+    color: $white
+    font-family: Gothic!important
+    font-style: normal!important
+    font-weight: bold!important
+    font-size: 16px!important
+    line-height: 20px!important
+    letter-spacing: 0.025em!important
+    width: 292px
+    
+
+.main-button
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #F2B705 0%, #F28705 49.48%, #D92C04 100%)
+  border-radius: 8.50187px 
+  border: none
+  padding: 24px 42px
+  box-shadow: 0px 0px 30px #DB3607 
+  transition: all linear .5s
+  margin: 6.5px 0
+  &:hover
+    box-shadow: none
+
+.main-button-thin
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #F2B705 0%, #F28705 49.48%, #D92C04 100%)
+  border-radius: 8.50187px 
+  border: none
+  padding: 0 22px
+  box-shadow: 0px 0px 30px #DB3607
+  transition: all cubic-bezier(0, 0, 1, 0.57) .5s 
+  color: $white!important
+  font-family: Gothic!important
+  font-style: normal!important
+  font-weight: bold!important
+  font-size: 16px!important
+  line-height: 20px!important
+  letter-spacing: 0.025em!important
+  height: 61px!important
+  width: 292px 
+  &:hover
+    box-shadow: none
+
+.content-first-screen__title-block
+  position: absolute
+  left: 100px
+  top: 200px
+  transition: all 1s ease
+  h1
+    transition: all 1s ease
+    font-family: Gothic
+    font-style: normal
+    font-weight: normal
+    font-size: 38px
+    line-height: 47px
+    letter-spacing: 0.01em
+    text-transform: uppercase 
+    padding: 6.5px 0
+  h2
+    transition: all 1s ease
+    font-style: normal
+    font-weight: normal
+    font-size: 18px
+    line-height: 25px
+    letter-spacing: 0.02em
+    padding: 6.5px 0
+  button
+    margin-top: 37px 
+    transition: all 1s ease
+
+.content-first-screen__title-block
+  transition: all s ease
+  width: 40%
+  margin-left: 40px
+
+.content-first-screen__icon-block
+  transition: all .5s ease
+  width: 452px
+  height: 370px
+  //border: 6px solid rgba(254, 209, 49, 100%)
+  position: absolute
+  right: 108px
+  top: 200px
+  background: rgba(255, 255, 255, 0.01)
+  backdrop-filter: blur(3px)
+  border-width: 6px
+  border-style: solid
+  border-image: linear-gradient(to top, #DB3607, rgba(254, 209, 49, 1))1 round 
+   
+.content-first-screen__icon-block-content
+  transition: all .5s ease
+  position: relative
+  width: 100%
+  height: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  &-row
+    display: flex 
+    align-items: center
+    justify-content: center
+.cross-center
+  position: absolute
+  top: 50%
+  left: 50%
+  margin-right: -50%
+  transform: translate(-50%, -50%)  
+
+.item-icon
+  transition: all .5s ease
+  margin: 17px
+  padding: 20px
+  padding: 10px
+  width: 40%
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  p
+    text-align: center
+  img
+    transition: all .5s ease
+    margin-bottom: 20px
+
+.hidden-block-first
+  display: none        
+    
+
+//map 
+
+.section-map-content
+  position: relative
+  width: 100%
+  height: auto    
+.section-map-content-map
+  
+  height: 378px
+  margin: 80px
+     
+.section-map-content-contacts
+  position: absolute
+  top: 69px
+  background: #fff
+  width: 233px
+  height: 268px
+  left: 346px
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.1)
+  border-radius: 10px 
+  z-index: 6
+.section-map-content-contacts-item
+  width: 233px
+  height: 268px
+  position: absolute
+  background: rgba(255, 255, 255, 0.5)
+  //opacity: 0.5
+  border-radius: 10px
+  left: 6px
+  top: -6px
+  z-index: 4
+
+.section-map-content-contacts
+  h4
+    margin-top: 13px
+    margin-left: 45px
+    position: relative
+    z-index: 999
+    font-family: Gothic
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 28px
+    letter-spacing: 0.01em
+    color: #525252 
+.row-contact
+  position: relative
+  z-index: 999
+  padding: 10px
+  margin-left: 15px
+  img
+    margin-right: 5px 
+  p
+    font-family: Gothic1
+    font-style: normal
+    font-weight: bold
+    font-size: 16px
+    line-height: 23px
+    letter-spacing: 0.01em
+    color: #525252
+    z-index: 999 
+    display: flex
+  a
+    display: block
+    margin-left: 18px
+    font-family: Gothic
+    font-style: normal
+    font-weight: normal
+    font-size: 16px
+    line-height: 23px
+    letter-spacing: 0.01em
+    color: #525252
+    text-decoration: none
+   
+//news
+
+.news__button
+  margin: 30px 0  
+  display: flex
+  justify-content: flex-end
+   
+  a
+    display: flex
+    align-items: center
+    transition: all linear .5s
+    text-decoration: none
+    font-family: Gothic
+    font-style: normal
+    font-weight: bold
+    font-size: 16px
+    line-height: 20px
+    letter-spacing: 0.025em
+    color: #FFFFFF
+    background: #C4C4C4
+    padding: 13px 21px
+    img
+      transition: all linear .5s
+    &:hover
+      background: #000 
+      & ~ img
+        margin-right: 5px 
+    
+.news
+  width: 100%
+  height: auto!important
+.news-container
+  margin: 0 84px
+.news__title
+  margin: 0 auto 
+  text-align: center
+  h3
+    font-style: normal
+    font-weight: normal
+    font-size: 38px
+    line-height: 47px
+    letter-spacing: 0.01em
+    text-transform: uppercase
+    color: #525252  
+    padding: 30px 0
+.news__items-item
+  width: 28%
+  height: 314px
+
+.news__items
+  display: flex  
+.news__items-item
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  padding: 12px
+  transition: all linear .5s
+  img
+    width: 100%
+    height: auto 
+  span
+    transition: all linear .5s
+    font-family: Museo2
+    font-style: normal
+    font-weight: bold
+    font-size: 15.9357px
+    line-height: 22px
+    letter-spacing: 0.01em
+    color: #525252  
+.hash
+  padding: 8px 0
+  font-style: normal
+  font-weight: normal
+  font-size: 13.9437px
+  line-height: 20px
+  letter-spacing: 0.01em
+  color: #525252    
+.date
+  font-style: normal
+  font-weight: normal
+  font-size: 13.9437px
+  line-height: 20px
+  letter-spacing: 0.01em
+  color: #525252
+  display: flex
+  transition: all linear .5s
+  justify-content: space-between
+  margin-top: 30px
+  a
+    text-decoration: none
+    font-style: normal
+    font-weight: normal
+    font-size: 13.9437px
+    line-height: 20px
+    letter-spacing: 0.01em
+    color: #525252
+    transition: all linear .5s
+    display: flex
+    align-items: center
+    img
+      transition: all ease-in .5s
+      width: 20px
+    &:hover
+      img
+        margin-left: 10px     
+       
+//rewie
+.rewies
+  width: 100%
+  position: relative
+  img
+   position: absolute
+   top: 16vw
+.rewies__container
+  transition: all linear .5s
+  margin-top: 60px
+  margin-left: 80px
+  margin-right: 30px  
+.rewies__content-row__photo
+  transition: all linear .5s
+  background-image: url('../img/revies/01.svg')  
+  background-size: cover
+  background-position: 50% 50%
+  border-radius: 10px
+  margin: 10px
+  width: 40%
+  height: 264px
+.rewies__content-row
+  display: flex
+  justify-content: space-around
+  position: relative
+   
+.rewies__content-row-title
+  transition: all linear .5s
+  padding: 15px 0
+  width: 62%
+  h2
+    font-family: Gothic
+    font-style: normal
+    font-weight: normal
+    font-size: 38px
+    line-height: 54px
+    letter-spacing: 0.01em
+    text-transform: uppercase
+    color: #525252
+
+.rewies__content-row__photo
+  transition: all linear .5s
+  padding: 80px 65px
+  p
+    font-family: Museo2
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 28px
+    letter-spacing: 0.01em
+    color: #525252
+  span
+    font-family: Museo0
+    font-style: normal
+    font-weight: normal
+    font-size: 20px
+    line-height: 28px
+    letter-spacing: 0.01em
+    color: #525252
+
+.rewies__content-row-title-second
+  transition: all linear .5s
+  padding: 15px 0
+  width: 46%
+  position: relative
+  img
+    position: absolute
+    right: 0
+    top: 45px
+  h4
+    width: 64%
+    right: 0
+    bottom: 17px
+    position: absolute 
+    font-style: normal
+    font-weight: 300
+    font-size: 20px
+    line-height: 28px
+    letter-spacing: 0.01em
+    color: #525252
+.rewies__content-row__photo-one
+  transition: all linear .5s
+  padding: 80px 65px
+  background-image: url('../img/revies/02.svg')
+  background-size: cover
+  background-position: 50% 50%
+  margin: 13px 12.5px 
+  border-radius: 10px
+  width: 40%
+  height: 264px
+  p
+    font-family: Museo2
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 28px
+    letter-spacing: 0.01em
+    color: #525252
+  span
+    font-family: Museo0
+    font-style: normal
+    font-weight: normal
+    font-size: 20px
+    line-height: 28px
+    letter-spacing: 0.01em
+    color: #525252
+
+.rewies__content-row__photo-two
+  transition: all linear .5s
+  padding: 80px 65px
+  background-image: url('../img/revies/03.svg')
+  background-size: cover
+  background-position: 50% 50% 
+  margin: 13px 12.5px  
+  border-radius: 10px
+  width: 40%
+  height: 264px
+  p
+    font-family: Museo2
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 28px
+    letter-spacing: 0.01em
+    color: #525252
+  span
+    font-family: Museo0
+    font-style: normal
+    font-weight: normal
+    font-size: 20px
+    line-height: 28px
+    letter-spacing: 0.01em
+    color: #525252 
+.rewies__content-row__photo-three
+  transition: all linear .5s
+  padding: 80px 65px
+  background-image: url('../img/revies/04.svg')
+  background-size: cover
+  background-position: 50% 50% 
+  margin: 13px 14.5px 
+  border-radius: 10px
+  width: 50%
+  height: 264px
+  p
+    font-family: Museo2
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 28px
+    letter-spacing: 0.01em
+    color: #525252
+  span
+    font-family: Museo0
+    font-style: normal
+    font-weight: normal
+    font-size: 20px
+    line-height: 28px
+    letter-spacing: 0.01em
+    color: #525252
+
+.rewies__content-row__photo-four
+  transition: all linear .5s
+  padding: 80px 65px
+  background-image: url('../img/revies/05.svg')
+  background-size: cover
+  background-position: 50% 50% 
+  margin: 13px 14.5px 
+  border-radius: 10px
+  width: 50%
+  height: 264px
+  p
+    font-family: Museo2
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 28px
+    letter-spacing: 0.01em
+    color: #525252
+  span
+    font-family: Museo0
+    font-style: normal
+    font-weight: normal
+    font-size: 20px
+    line-height: 28px
+    letter-spacing: 0.01em
+    color: #525252
+
+//project
+.projects-text-block
+  width: 41%
+  h3 
+    font-family: Museo1
+    font-style: normal
+    font-weight: bold
+    font-size: 24px
+    line-height: 34px
+    letter-spacing: 0.01em
+    color: #525252  
+  p
+    font-family: Museo0
+    font-style: normal
+    font-weight: normal
+    font-size: 20px
+    line-height: 34px
+    letter-spacing: 0.01em
+    color: #525252
+.projects_title
+  text-align: center
+  p
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 28px
+    letter-spacing: 0.01em
+    text-decoration-line: underline
+    color: #525252
+
+.projects__row
+  display: flex
+  flex-wrap: nowrap
+  justify-content: space-around 
+
+.projects__items
+  display: flex
+  flex-direction: column
+  
+.projects__container
+  margin: 70px 141px
+.projects__items-item
+  width: 25%
+  height: auto
+  margin: 25px
+  img
+    width: 100%
+    height: auto
+  p
+    padding: 0 20px
+    margin: 20px 0
+    font-family: Museo2
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 28px
+    letter-spacing: 0.01em
+    color: #525252    
+  span
+    margin-top: 20px
+    font-family: Museo0
+    font-style: normal
+    font-weight: bold
+    font-size: 15px
+    line-height: 20px
+    letter-spacing: 0.01em
+    color: #525252
+    
+//advantages
+
+.advantages
+  transition: all linear .5s
+  width: 100%
+  height: 859px
+  background-size: cover
+
+.advantages__content
+  transition: all linear .5s
+  display: flex 
+  align-items: flex-end
+     
+.advantages__content-row
+  transition: all linear .5s
+  h2
+    transition: all linear .5s
+    width: 56%
+    margin: 204px 0
+    font-family: Gothic
+    font-style: normal
+    font-weight: normal
+    font-size: 38px
+    line-height: 47px
+    letter-spacing: 0.01em
+    text-transform: uppercase
+    color: #F4F4F4
+
+.advantages__container
+  transition: all linear .5s
+  margin: 0 80px  
+
+.advantages__content-row
+  transition: all linear .5s
+  width: 50%  
+
+.advantages__content-row-title
+  transition: all linear .5s
+  position: relative
+  img
+    right: 0
+    bottom: 100px
+    position: absolute 
+  p
+    bottom: 50px
+    position: absolute
+    font-style: normal
+    font-weight: normal
+    font-size: 20px
+    line-height: 28px
+    letter-spacing: 0.01em
+    width: 71%
+
+.advantages__content-row-items
+  transition: all linear .5s
+  margin: 40px auto
+  width: 70%
+  p
+    display: flex
+    align-items: center
+    font-family: Museo2
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 28px
+    letter-spacing: 0.01em
+  img
+    margin-right: 15px
+  span
+    width: 80%
+    margin-left: 45px
+    display: block
+
+//callback
+
+.callback
+  width: 100%
+  height: 365px    
+.callback-container
+  margin: 58px 0
+  background: #F8F8F8
+  height: 249px
+  position: relative
+
+.callback__form
+  margin: 0 auto
+  position: relative
+  top: 45px
+  width: 916px
+  height: 278px  
+  background: #FFFFFF
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+  z-index: 99
+  display: flex
+  flex-direction: column
+  padding: 37px 50px
+  h4
+    font-family: Gothic1
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 28px
+    letter-spacing: 0.01em
+    color: #525252
+  p
+    font-family: Gothic
+    font-style: normal
+    font-weight: normal
+    font-size: 20px
+    line-height: 28px
+    letter-spacing: 0.01em
+    color: #525252
+.desktop-mobile-form-date
+  right: -53px
+  top: -71px
+  position: absolute
+
+.callback__form-date
+  padding: 24px 19px
+  background: #FFFFFF
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+  text-align: center
+  z-index: 999
+  p
+    font-family: Museo
+    font-style: normal
+    font-weight: normal
+    font-size: 16px
+    line-height: 23px
+    letter-spacing: 0.01em
+    color: #525252
+.callback__form-bg
+  top: -15px
+  right: -15px
+  margin: 0 auto
+  position: absolute
+  width: 916px
+  height: 278px  
+  background: #FFFFFF
+  opacity: 0.5
+  border-radius: 10px
+  z-index: -3
+
+.contact-form
+  display: flex
+  margin: 28px 0
+  input
+    text-align: center 
+  p
+    margin: 5px 
+.form-input
+  background: #F4F4F4
+  border-radius: 8.50187px
+  font-family: Museo
+  font-style: normal
+  font-weight: 600
+  font-size: 14px
+  line-height: 17px
+  letter-spacing: 0.01em
+  color: rgba(82, 82, 82, 0.5) 
+  padding: 19px 48px
+  border: none 
+  width: 240px
+  height: 61px
+.image-form
+  position: relative
+  img
+    position: absolute 
+    top: 8px
+    left: 10px
+
+.clock-form
+  position: relative
+  img
+    position: absolute     
+    right: -57px
+    bottom: -23px
+    z-index: -2
+
+.personal
+  font-family: Museo!important
+  font-style: normal!important
+  font-weight: 600!important
+  font-size: 14px!important
+  line-height: 17px!important
+  letter-spacing: 0.01em!important
+  color: rgba(82, 82, 82, 0.3) !important
+  cursor: pointer!important
+  a
+    text-decoration: underline
+    color: rgba(82, 82, 82, 0.3) 
+       
+
+.mobile-politic
+  display: none
+
+.mobile-form-date
+  display: none
 
   
+//instriction
+
+.instruction
+  width: 100%
+  height: 1080px
+  background-size: cover
+  background-position: 50% 50%
+.instruction__container
+  width: 100%
+//   margin: 80px
+.instruction__content__title
+  padding: 74px 80px
+  h2
+    
+    font-family: Gothic
+    font-style: normal
+    font-weight: normal
+    font-size: 38px
+    line-height: 47px
+    letter-spacing: 0.01em
+    text-transform: uppercase
+    color: #525252     
+.instruction__content__desc
+  margin: 74px 116px
+  width: 54%
+  position: relative
+  img
+    position: absolute
+    top: -30px
+    left: -42px
+  p
+    margin-bottom: 20px
+    font-family: Museo
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 28px
+    letter-spacing: 0.01em
+    color: #525252
+  span
+    font-family: Museo
+    font-style: normal
+    font-weight: normal
+    font-size: 20px
+    line-height: 28px
+    letter-spacing: 0.01em
+    color: #525252
+.instruction__content__box
+  position: relative
+.instruction__content__box-container  
+  z-index: 999
+  position: relative
+  padding: 50px 59px
+  margin: 0 80px
+  width: 916px
+  height: 591px
+  background: #FFFFFF
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+.instruction__content__box-transparent
+  z-index: -1
+  position: absolute 
+  width: 886px
+  height: 591px
+  background: #FFFFFF
+  opacity: 0.5
+  border-radius: 10px 
+  top: -17px
+  left: 15px
+.instruction__content__box-container-numbers
+  display: flex
+  //flex-direction: column
+  //align-items: center
+  //padding: 20px
+  display: flex  
+  p
+    font-family: Museo
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 28px
+    text-align: center
+    letter-spacing: 0.01em
+    color: #525252
+  span
+    font-family: Museo0
+    font-style: normal
+    font-weight: normal
+    font-size: 16px
+    line-height: 22px
+    text-align: center
+    letter-spacing: 0.01em
+    color: #525252
+
+.numbers__item,  
+.numbers__item-img
+  margin: 10.5px
+  display: flex
+  flex-direction: column
+  align-items: center
+  //justify-content: space-around
+  width: 30%
+  height: 230px
+  img
+    margin: 10px 0
+  p
+    margin-bottom: 30px    
+.iphone
+  width: 279px
+  position: absolute
+  left: 0
+  bottom: -10px
+.mobile-iphone
+  display: none
+
+//about
+
+.mobile-box
+  display: none  
+.about
+  width: 100%
+  height: 859px   
+  background-size: cover   
+.about__container
+  padding: 100px 80px  
+.about___item
+  width: 45% 
+  display: flex
+  flex-direction: column
+  
+  h2
+    font-family: Museo2
+    font-style: normal
+    font-weight: bold
+    font-size: 24px
+    line-height: 34px
+    letter-spacing: 0.01em
+    color: #F4F4F4
+    margin-bottom: 33px
+  p
+    font-family: Gothic
+    font-style: normal
+    font-weight: normal
+    font-size: 18px
+    line-height: 22px
+    letter-spacing: 0.01em
+    color: #F4F4F4
+  img
+    margin: 0 auto  
+.about__container
+  position: relative
+.about___item-border
+  background: rgba(255, 255, 255, 0.01)
+  backdrop-filter: blur(5px)
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-around    
+  width: 530px
+  height: 638px
+  //border: 6px solid rgba(254, 209, 49, 100%)
+  position: absolute
+  right: 108px  
+  top: 100px
+  border-width: 6px
+  border-style: solid
+  border-image: linear-gradient(to top, #DB3607, rgba(254, 209, 49, 1))1 round 
+  p
+    font-family: Museo
+    font-style: normal
+    font-weight: 300
+    font-size: 16px
+    line-height: 23px
+    letter-spacing: 0.01em 
+.about___item-border__content
+  width: 79%
+  margin: 0 auto
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  img
+    margin: 0 auto
+    text-align: center  
+    margin-bottom: 40px   
+.services-logo-vector-mobile
+  display: none

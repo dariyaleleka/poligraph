@@ -1,30 +1,114 @@
 /*! .header */
-.header
+.header, .bg-blue
+  height: 106px
+  position: fixed
+  top: 0 
+  left: 0
+  right: 0
+  width: 100%
   transition: all linear .5s
+  transition: background 1s
   font-style: normal
   font-weight: normal
   font-size: 16px
   line-height: 23px
   letter-spacing: 0.02em
   font-family: Museo
-  height: 118px
-  position: absolute
-  top: 0 
-  left: 0
-  right: 0
+  z-index: 9999
+.header 
   width: 100%
-  z-index: 999 
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), rgba(255, 255, 255, 0.3)
+  height: 106px
+  z-index: 9999
+  background-color: rgba(255, 255, 255, 0.3)
+  //z-index: -4
+
+
+.bg-blue
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), rgba(255, 255, 255, 0.3)
+  display: none
+  z-index: 999
+  
+.main-color-change-dark
+  transition: all linear 1s
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), rgba(255, 255, 255, 0.3)!important
+
+.main-color-change
+  transition: all linear 1s
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), rgba(255, 255, 255, 0.3)!important
+
+.burger-menu 
+  position: absolute
+  right: 40px 
+  width: 34px
+  height: 50px
+  cursor: pointer
+
+.burger 
+  position: absolute
+  background: #fff
+  width: 100%
+  height: 5px
+  top: 50%
+  border-radius: 8px
+  right: 0px
+  margin-top: -5px
+  opacity: 1
+
+.burger
+  &::before 
+    border-radius: 8px
+    position: absolute
+    background: #fff
+    width: 34px
+    height: 5px
+    top: 10px
+    content: ""
+    display: block
+
+.burger
+  &::after 
+    border-radius: 8px
+    position: absolute
+    background: #fff
+    width: 34px
+    height: 5px
+    bottom: 10px
+    content: ""
+    display: block
+
+.burger::after, .burger
+  &::before, .burger 
+    transition: all .3s ease-in-out
+    -webkit-transition: all .3s ease-in-out
+
+.burger-menu.menu-on .burger
+  &::after
+    transform: rotate(-45deg)
+    -webkit-transform: rotate(-45deg)
+    bottom: 0px
+
+.burger-menu.menu-on .burger
+  &::before
+    transform: rotate(45deg)
+    -webkit-transform: rotate(45deg)
+    top: 0px
+
+.burger-menu.menu-on .burger
+ background: rgba(111,111,111,.0)
+
+
+
 
 .header__container
   margin: 0 106px  
   transition: all linear .5s
-  padding: 16px 0
+  
 
 .header__content
   transition: all linear .5s
   display: flex
   align-items: center
+  
   a
     text-decoration: none 
 
@@ -40,6 +124,8 @@
     font-size: 16px
     line-height: 23px
     letter-spacing: 0.02em
+  img
+    padding-top: 5px   
 
 .header__content-phones
   ul 
@@ -58,59 +144,90 @@
   display: flex
   align-items: center 
 
+.hidden-links_block
+  transition: all linear .5s
+  background-image: url('../img/ract.svg')
+  background-size: cover
+  width: 235px
+  height: 79px
+  display: none
+  opacity: 1
+  flex-direction: column
+  position: absolute
+  padding: 20px
+  color: $dark
+  li 
+    padding: 3px!important
+    a
+      font-family: Museo!important
+      transition: all linear .5s
+      padding: 5px!important
+      font-style: normal!important
+      font-weight: normal!important
+      font-size: 14px!important
+      line-height: 20px!important
+      letter-spacing: 0.02em!important
+      color: #000000!important
+      text-decoration: none!important
+      &:hover
+        color: $accentcolor!important
+.hidden-links
+  &:hover ~ .hidden-links_block
+    a
+      margin-left: 0
+    
+// .btn-row 
+//     position: absolute 
+//     right: 40px
+//     top: 35px
+//     &:last-child 
+//         margin: 0
+    
+// .js-burger
+//   border-radius: 2px!important
 
-.btn-row 
-    position: absolute
-    right: 29px 
-    margin-right: 40px
-    &:last-child 
-        margin: 0
+// .burger 
+//     position: relative
+//     display: block
+//     width: 34px
+//     height: 30px
+//     padding: 13px 0
+//     border-radius: 2px
+//     background-color: #fff
+//     background-clip: content-box
+//     cursor: pointer
+//     transition: background 50ms ease-in 250ms
+//     &:before,
+//     &:after 
+//         content: ''
+//         border-radius: 2px
+//         position: absolute
+//         width: 100%
+//         height: 4px
+//         top: 0
+//         left: 0
+//         background: #fff
+//         transform: rotate(0deg) scale(1)
+//         transition: top .25s ease-in .3s,
+//         transform .25s ease-in 0s
     
-.js-burger
-  border-radius: 2px!important
-
-.burger 
-    position: relative
-    display: block
-    width: 34px
-    height: 30px
-    padding: 13px 0
-    border-radius: 2px
-    background-color: #fff
-    background-clip: content-box
-    cursor: pointer
-    transition: background 50ms ease-in 250ms
-    &:before,
-    &:after 
-        content: ''
-        border-radius: 2px
-        position: absolute
-        width: 100%
-        height: 4px
-        top: 0
-        left: 0
-        background: #fff
-        transform: rotate(0deg) scale(1)
-        transition: top .25s ease-in .3s,
-        transform .25s ease-in 0s
+//     &:after 
+//         top: 26px
     
-    &:after 
-        top: 26px
-    
-    &.is-open 
-        background-color: transparent
-        transition: background 50ms ease-in 250ms
-        &:before,
-        &:after 
-            top: 13px
-            transition: top .25s ease-in 0s,
-            transform .25s ease-in .3s
+//     &.is-open 
+//         background-color: transparent
+//         transition: background 50ms ease-in 250ms
+//         &:before,
+//         &:after 
+//             top: 13px
+//             transition: top .25s ease-in 0s,
+//             transform .25s ease-in .3s
         
-        &:before 
-            transform: rotate(-45deg) scaleX(1.2)
+//         &:before 
+//             transform: rotate(-45deg) scaleX(1.2)
         
-        &:after 
-            transform: rotate(45deg) scaleX(1.2)
+//         &:after 
+//             transform: rotate(45deg) scaleX(1.2)
 
 .bottom-line
   border-bottom: 1px solid $white    
@@ -158,6 +275,7 @@
   justify-content: space-between
   margin-left: 116px   
 .header-content-menu
+  position: relative
   ul
     li
       padding: 9px 0
@@ -174,35 +292,41 @@
       &:hover
         a
           text-decoration: none
-          margin-left: 15px
+          margin-left: 10px
 
 .header-content-mobile
-  position: relative
   width: 100%
   height: auto
-  position: absolute
+  position: fixed
   padding: 20px
   left: 0
   right: 0
-  top: 118px
-  z-index: 999 
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), rgba(255, 255, 255, 0.3)
+  top: 106px
+  z-index: 9999 
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), rgba(255, 255, 255, 0.3)
   font-size: 14px!important
   line-height: 17px!important
   letter-spacing: 0.01em!important
+
 .header-content
-  position: relative
   width: 100%
   height: auto
-  position: absolute
+  position: fixed
   padding: 20px
   left: 0
   right: 0
-  top: 118px
-  z-index: 999 
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), rgba(255, 255, 255, 0.3)
+  top: 106px
+  z-index: 9999 
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), rgba(255, 255, 255, 0.3)
 .header-content-img
   position: absolute   
   right: 40px 
-  top: 100px        
+  top: 100px 
+
+// .page-news
+//   width: 100%
+//   height: 464px
+//   display: table
+//   background-image: url('../img/bg-news.svg')     
+//   background-size: cover    
 /*! .header end*/
