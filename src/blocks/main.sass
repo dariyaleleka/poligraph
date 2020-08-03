@@ -462,6 +462,26 @@ li::selection
   .header__container 
     margin: 0 50px
 @media screen and (max-width: 992px)
+  .animation-block
+    min-height: 500px!important
+  .clock-form 
+    img 
+      position: absolute
+      right: -26px
+      bottom: 13px
+  .animation-form__form 
+    top: 26%
+    left: 50%
+    margin-right: -50%
+    -webkit-transform: translate(-64%, -50%)
+    -ms-transform: translate(-64%, -50%)
+    transform: translate(-50%, -50%)
+  .callback__form-bg 
+    top: -15px
+    right: 0px
+  .clock-form
+    img
+      width: 120px 
   .animation-form__form 
     top: 26%
 
@@ -488,7 +508,7 @@ li::selection
 
   .callback__form 
     max-width: 916px
-    height: 500px
+    min-height: 370px
 
   .popup__content-form
     width: 88%
@@ -766,6 +786,15 @@ li::selection
     h2
       margin: 20px 0   
 @media screen and (max-width: 768px)
+  .animation-block
+    height: 642px!important
+  .animation-phone
+    width: 120px!important
+  .animation-title 
+    position: absolute
+    left: 43px
+    h3
+      margin-bottom: 30px 
 
   .form-input
     width: 272px
@@ -783,7 +812,7 @@ li::selection
 
   .clock-form 
     img 
-      width: 129px
+      width: 188px
 
   .personal
     width: 50%
@@ -826,7 +855,7 @@ li::selection
       font-size: 13px
 
   .callback-privat 
-    min-height: 790px !important
+    min-height: 912px !important
 
   .privat-desc-block
     height: 128px!important
@@ -1075,6 +1104,11 @@ li::selection
     min-height: 490px!important  
   
 @media screen and (max-width: 576px)
+  .animation-title 
+    position: absolute
+    left: 36px
+    h3
+      margin-bottom: 30px 
 
   .clock-form 
     img 
@@ -1227,6 +1261,10 @@ li::selection
 
   .first-screen__info 
     left: 18px
+    height: 75%
+    button
+      position: absolute
+      bottom: 20px 
 
   //.quotes 
     //height: 100%
@@ -1465,6 +1503,24 @@ li::selection
     margin-left: 18px
 @media screen and (max-width: 440px)
 
+  .first-screen__info 
+    left: 18px
+    height: 69%
+
+  .animation-title
+    position: absolute
+    left: 17px
+    top: 40px
+    h3
+      margin-bottom: 23px
+      font-size: 20px
+      line-height: 28px
+    p
+      font-weight: 300
+      font-size: 16px
+      line-height: 23px
+
+
   .animation-block
     left: 50%
     transform: translate(-50%, 0%)
@@ -1698,7 +1754,7 @@ li::selection
 
   .animation-block
     left: 50%
-    transform: translate(-36%, 0%)
+    transform: translate(-50%, 0%)
 
   .popup__content-form 
     width: 82%
