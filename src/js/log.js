@@ -97,11 +97,6 @@ $(document).ready(function(){
   });
 
 
-
-  
-
-
-
   // document.getElementById('click-button').addEventListener('click', function() {
     
   //   if(pageYOffset > 100){
@@ -148,7 +143,7 @@ $(document).ready(function(){
   });
   
 
-  // Accordion Action
+// Accordion Action
 const accordionItem = document.querySelectorAll(".accordion-item");
 
 accordionItem.forEach((el) =>

@@ -1363,6 +1363,22 @@ body button {
   letter-spacing: 0.025em !important;
 }
 
+::-webkit-scrollbar {
+  width: 4px;
+  background: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+  border-width: 1px 1px 1px 2px;
+  border-color: transparent;
+  background-color: #484848;
+}
+
+html,
+body {
+  height: 100%;
+}
+
 p::-moz-selection {
   color: #F4F4F4;
   background: #F5A446;
@@ -3650,9 +3666,9 @@ li::selection {
   -webkit-transition: all linear .5s;
   -o-transition: all linear .5s;
   transition: all linear .5s;
-  width: 40%;
+  width: 45%;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 60px 0;
 }
 
 .post__content-text p {
@@ -3706,6 +3722,7 @@ li::selection {
   font-size: 18px;
   line-height: 22px;
   color: #404041;
+  padding: 10px;
 }
 
 .post__item-social-row ul li a {
@@ -4076,6 +4093,9 @@ li::selection {
 .answers {
   width: 100%;
   height: auto;
+  -webkit-transition: all linear .5s;
+  -o-transition: all linear .5s;
+  transition: all linear .5s;
 }
 
 .answers__content-title {
@@ -10346,7 +10366,7 @@ li::selection {
   }
 
   .bg-content {
-    min-height: 204px;
+    min-height: 198px;
   }
 
   .answers__content-title {

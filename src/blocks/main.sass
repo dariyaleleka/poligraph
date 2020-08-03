@@ -87,10 +87,18 @@ body
     font-size: 16px!important
     line-height: 20px
     letter-spacing: 0.025em!important
-// html 
-//   overflow: hidden
 
+::-webkit-scrollbar
+  width: 4px
+  background: #f0f0f0
 
+::-webkit-scrollbar-thumb
+  border-width: 1px 1px 1px 2px
+  border-color: transparent
+  background-color: #484848
+
+html, body
+  height: 100%
 // body 
 //   position: fixed
 //   left: 0
@@ -1237,7 +1245,7 @@ li::selection
     margin-bottom: 20px  
 
   .bg-content 
-    min-height: 204px
+    min-height: 198px
 
   .answers__content-title
     padding: 0 15px
