@@ -1544,6 +1544,9 @@ li::selection {
 }
 
 .bg-blue {
+  -webkit-transition-duration: 2.5;
+  -o-transition-duration: 2.5;
+  transition-duration: 2.5;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.65)), to(rgba(0, 0, 0, 0.65))), rgba(255, 255, 255, 0.3);
   background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), rgba(255, 255, 255, 0.3);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), rgba(255, 255, 255, 0.3);
@@ -1558,6 +1561,7 @@ li::selection {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.65)), to(rgba(0, 0, 0, 0.65))), rgba(255, 255, 255, 0.3) !important;
   background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), rgba(255, 255, 255, 0.3) !important;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), rgba(255, 255, 255, 0.3) !important;
+  opacity: 1;
 }
 
 .main-color-change {
@@ -1567,6 +1571,7 @@ li::selection {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), rgba(255, 255, 255, 0.3) !important;
   background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), rgba(255, 255, 255, 0.3) !important;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), rgba(255, 255, 255, 0.3) !important;
+  opacity: 1;
 }
 
 .burger-menu {
@@ -9038,6 +9043,20 @@ li::selection {
   }
 }
 
+@media screen and (max-width: 1300px) {
+  .privat-quote {
+    top: 95px;
+  }
+
+  .services__item {
+    padding: 41px 50px;
+  }
+
+  .services_container {
+    padding: 10px 0 15px;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .about-first-screen {
     width: 56% !important;
@@ -10279,6 +10298,12 @@ li::selection {
 }
 
 @media screen and (max-width: 576px) {
+  .post__content-text,
+  .post__item-social {
+    width: 100%;
+    padding: 80px 30px;
+  }
+
   .animation-title {
     position: absolute;
     left: 36px;
@@ -10327,7 +10352,7 @@ li::selection {
   }
 
   .mob-animation-politics {
-    width: 60%;
+    width: 85%;
     margin: 20px 0px !important;
   }
 
@@ -10422,6 +10447,7 @@ li::selection {
     line-height: 28px;
     letter-spacing: 0.01em;
     text-transform: uppercase;
+    padding: 50px 0 0 20px;
   }
 
   .services_container {
@@ -10865,7 +10891,7 @@ li::selection {
   }
 
   .callback-privat {
-    min-height: 934px !important;
+    min-height: 969px !important;
   }
 
   .services__item {
@@ -11155,7 +11181,7 @@ li::selection {
   }
 
   .callback {
-    min-height: 947px !important;
+    min-height: 1005px !important;
   }
 
   .services__item {

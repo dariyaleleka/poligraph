@@ -8,14 +8,37 @@ $(".burger-menu").click(function () {
   $(this).toggleClass("menu-on");
 });
 
+let header = document.getElementById('header');
+let headerDarkContent = document.getElementById('header-content');
+let headerCont = document.getElementById('header-content');
+let headerContMob = document.getElementById('header-content-mob');
+let headerContMobLogo = document.getElementById('header-content-logo');
+
+document.getElementById('click-button').addEventListener('click', function() {
+
+  if(pageYOffset >= 100){
+    headerDarkContent.classList.toggle('main-color-change-dark');
+  }else if(pageYOffset <= 100){
+
+    header.classList.toggle('main-color-change');
+    headerDarkContent.classList.toggle('main-color-change');
+    headerContMob.classList.toggle('main-color-change');
+    //headerDarkContent.classList.toggle('main-color-change');
+
+  }else{
+    headerDarkContent.classList.toggle('main-color-change');
+  }
+
+});
+
 $( document ).ready(function(){
     $( ".btn-row" ).click(function(){ 
       //$( ".header-content" ).slideToggle( "slow", "linear" ); 
       if(window.innerWidth >= 1200) {
-            $( ".header-content" ).slideToggle("slow", "linear" );
+            $( ".header-content" ).toggle();
             
       }else if(window.innerWidth <= 1200){
-            $( ".header-content-mobile" ).slideToggle( "slow", "linear" ); 
+            $( ".header-content-mobile" ).toggle();
       }
     });
 });
@@ -47,100 +70,27 @@ $(document).ready(function(){
 });
 
 
-
-// $(document).ready(function(){
-
-//   let header = document.getElementById('header');
-//   let headerDarkContent = document.getElementById('header-content');
-//   let headerCont = document.getElementById('header-content');
-//   let headerContMob = document.getElementById('header-content-mob');
-
-//   let headerContMobLogo = document.getElementById('header-content-logo');
-
-//   $(window).scroll(function() {
-// 		if ($(this).scrollTop() > 100) {
-//       console.log('Скролл больше 100 ')
-
-//       //header.classList.toggle('main-color-change');
-//       //headerCont.classList.toggle('main-color-change');
-
-//       headerContMob.classList.toggle('main-color-change');
-//       headerDarkContent.classList.toggle('main-color-change-dark');
-
-// 		} else if($(this).scrollTop() < 100) {
-
-// 			header.classList.toggle('main-color-change');
-//       headerDarkContent.classList.toggle('main-color-change');
-
-//       console.log('Скролл меньше 100 ');
-
-// 		}
-//   });
-    
-// });
-
-// $(function() {
-//   $(".burger-menu").click(function() {
-//       //$(".bg-content").addClass("active-menu");         
-
-//       // if(pageXOffset < 576) {
-//       //   $(".bg-content").toggleClass("active-menu-mob");
-//       // }else{
-//         $(".bg-content").toggleClass("active-menu"); 
-//       //}
-//   })
-// });
-
   $( "#hidden-links a" ).click(function(){ 
     event.preventDefault();
     $( ".hidden-links_block" ).slideToggle( "linear" ); 
   });
 
 
-  // document.getElementById('click-button').addEventListener('click', function() {
+
+
+  // $("#click-button").click(function () {
     
-  //   if(pageYOffset > 100){
-
-  //     console.log('Скролл больше 100 ')
-  //     // header.classList.toggle('main-color-change');
-  //     // headerCont.classList.toggle('main-color-change');
-  //     // headerContMob.classList.toggle('main-color-change');
-  //      headerDarkContent.classList.toggle('main-color-change-dark');
-
-
-  //     //header.style.background = 'linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), rgba(255, 255, 255, 0.3)';
-  //     //headerCont.style.background = 'linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), rgba(255, 255, 255, 0.3)';
-  //     //headerContMob.style.background = 'linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), rgba(255, 255, 255, 0.3)';
-
-  //   }else if(window.innerHeight < 100){
-     
-  //     // header.classList.toggle('main-color-change');
-  //     // headerDark.classList.toggle('main-color-change');
-  //     console.log('Скролл меньше 100 ')
-  //   }
-  // });
-  let header = document.getElementById('header');
-  let headerDarkContent = document.getElementById('header-content');
-  let headerCont = document.getElementById('header-content');
-  let headerContMob = document.getElementById('header-content-mob');
-  let headerContMobLogo = document.getElementById('header-content-logo');
-
-  document.getElementById('click-button').addEventListener('click', function() {
-  
-    if(pageYOffset >= 100){
-
-      headerDarkContent.classList.toggle('main-color-change-dark');
-
-    }else if(pageYOffset <= 100){
-
-      header.classList.toggle('main-color-change');
-      headerDarkContent.classList.toggle('main-color-change');
-      headerContMob.classList.toggle('main-color-change');
-      //headerDarkContent.classList.toggle('main-color-change');
-    }else{
-      headerDarkContent.classList.toggle('main-color-change');
-    }
-  });
+  //       $('#header-content').animate({ backgroundColor: "#FF4500"}, 400);
+        
+      
+  // });  
+  // $(document).ready(function(){
+  //   $(".Box").hover(function() {
+  //   $(this).stop().animate({ backgroundColor: "#FF4500"}, 400);
+  //   },function() {
+  //   $(this).stop().animate({ backgroundColor: "#ffffff" }, 400);
+  //   });
+  //   });
   
 
 // Accordion Action
@@ -156,18 +106,3 @@ accordionItem.forEach((el) =>
     }
   })
 );
-
-
-
-
-  // $( ".click-button" ).click(function(){ 
-  //   //$( ".header-content" ).slideToggle( "slow", "linear" ); 
-  //   if(window.innerWidth <= 576) {
-  //         $( ".header" ).classList.toggle('main--main-bg');
-  //   }else {
-  //         //$( ".header" ).slideToggle( "slow", "linear" ); 
-  //   }
-  // });
-  //let changeColor = document.getElementById('click-button');
-  
-  
