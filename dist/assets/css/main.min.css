@@ -10298,6 +10298,10 @@ li::selection {
 }
 
 @media screen and (max-width: 576px) {
+  .services__item p {
+    margin-bottom: 16px;
+  }
+
   .post__content-text,
   .post__item-social {
     width: 100%;
@@ -10506,6 +10510,11 @@ li::selection {
   .first-screen__info button {
     position: absolute;
     bottom: 20px;
+    left: 50%;
+    margin-right: -50%;
+    -webkit-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
   }
 
   .first-screen {
